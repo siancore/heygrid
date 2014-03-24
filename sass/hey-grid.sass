@@ -1,0 +1,233 @@
+@import "vars"
+@import "mixins"
+
+// Hey Grid
+[class*="cols-"]
+	display: block
+	text-align: center
+	margin: 10px
+	vertical-align: top
+	+prefix(box-sizing, border-box)
+
+	@media screen and (min-width: $small-device)
+		+inline-block
+
+
+[class*="layout-"],
+[class*="grid-col-"],
+	+inline-block
+	text-align: center
+	margin: 0
+	vertical-align: top
+	+prefix(box-sizing, border-box)
+
+	
+// Demo 
+[class*="cols-"],
+[class*="grid-col-"],
+[class*="layout-"],
+.grid-box
+	vertical-align: top
+	+prefix(box-sizing, border-box)
+	@media screen and (min-width: $small-device)
+		+inline-block
+
+.grid-box
+	+inline-block
+	text-align: center
+
+[class*="grid-for"].margin-boxes
+
+	.grid-box
+		+prefix(background-clip, padding-box)
+		border: 10px solid transparent
+
+*.col-set
+	margin: 0
+
+.grid-wrap,
+	display: block
+	margin: auto
+	text-align: center
+
+	@media screen and (min-width: $portrait-ipad)
+		text-align: center
+
+	@media screen and (min-width: 960px)
+		width: $width-960
+
+.grid-columns,
+	display: block
+	margin: auto
+	text-align: center
+
+	@media screen and (min-width: $portrait-ipad)
+		text-align: center
+
+	@media screen and (min-width: 960px)
+		width: $width-960
+
+
+.grid-wrap,
+[class*="cols-"]
+		
+	img
+		max-width: 100%
+		height: auto
+
+.hide
+	display: none
+
+	
+	
+.grid-960
+	width: $width-960
+
+
+.grid-col-full
+	width: $width-100-percent
+
+	&:before
+		content: "full width"
+
+
+.grid-col-half
+	width: 50%
+
+	&:before
+		content: "half"
+
+.grid-col-third
+	width: 33.3%
+
+	&:before
+		content: "third"
+
+.grid-col-fourth
+	width: 25%
+
+	&:before
+		content: "fourth"
+
+.grid-col-fifth
+	width: 20%
+
+	&:before
+		content: "fifth"
+
+
+/// Layouts
+@for $i from 1 through 12
+	.#{$class-layout}-#{$i}0
+		
+		width: (($i*10)/100)*100%
+			
+
+
+/// Boxes
+@for $i from 1 through 12
+	.#{$class-mod}-#{$i}
+		
+		.grid-box
+			width: ($width-100-percent/$i)
+			
+
+
+// cols normal
+@for $i from 1 through 12
+	.#{$class-cols}-#{$i}
+
+		@media screen and (min-width: $grid-960)
+			width: ($col-width*$i)+(($col-margin*2)*$i0)
+
+		@for $in from 1 through 6
+			
+			@if $in == 6
+				@media screen and (min-width: $small-device ) and (max-width: ( ($grid-960 - ($col-width-responsive * ($in - 1)) ) - 1) )
+					width: (($col-width-responsive - (5 * $in) )*$i)+(($col-margin*2)*$i0)
+			@else
+				@media screen and (min-width: $grid-960 - ($col-width-responsive * $in) ) and (max-width: ( ($grid-960 - ($col-width-responsive * ($in - 1)) ) - 1) )
+					width: (($col-width-responsive - (5 * $in) )*$i)+(($col-margin*2)*$i0)
+			
+	$i0: $i
+
+//sets
+@for $i from 1 through 12
+	.#{$class-cols}-#{$i}.#{$class-col-set}
+
+		@media screen and (min-width: $grid-960)
+			width: (($col-width+20)*$i)
+
+		
+		@for $in from 1 through 6
+			@media screen and (min-width: $grid-960 - ($col-width-responsive * $in ) ) and (max-width: ($grid-960 - ($col-width-responsive * ($in - 1) ) )- 1 )
+				width: (($col-width-responsive + ( 20 - (5 * $in ))) * $i)
+
+
+* [class*="no-cols-"]
+	display: block!important
+
+
+/******************/
+///// Debuger /////
+/****************/
+
+[heygrid-debug]
+
+	[class*="cols-"],
+	[class*="grid-col-"],
+	[class*="layout-"],
+	[class*="grid-for"] .grid-box,
+	.grid-box
+	
+		//+prefix(border-radius, 2px)
+		background-color: $bkcolor-cols
+		min-height: 60px
+		outline: 1px solid rgba(0, 0, 0, .09)
+		color: #fff
+		overflow: hidden
+		
+		&:before
+			line-height: 60px
+			font-family: arial
+			font-weight: bold
+			font-size: 18px
+
+			@media screen and (max-width: $small-device)
+				font-size: 12px
+
+
+	*.col-set
+		background-color: transparent
+
+		&:before
+			display: none
+
+	/// Boxes
+	@for $i from 1 through 12
+		.#{$class-layout}-#{$i}0
+				
+			&:before
+				content: "#{$i}0%"
+
+
+	/// Boxes
+	@for $i from 1 through 12
+		.#{$class-mod}-#{$i},
+		&.#{$class-mod}-#{$i}
+			
+			.grid-box
+				
+				&:before
+					content: "#{$i}"
+
+
+	// cols normal
+	@for $i from 1 through 12
+		.#{$class-cols}-#{$i}
+
+			&:before
+				content: "#{$i}"
+
+				
+		$i0: $i

@@ -1,0 +1,60 @@
+// Name
+// In, Out
+// Mod date
+// Changelog
+@mixin icon($img)
+        overflow: hidden
+        display: inline-block
+        text-indent: -99999em
+        @include icons-sprite($img)
+        width: icons-sprite-width($img)
+        height: icons-sprite-height($img)
+        text-align: left
+
+@mixin clearfix
+        zoom: 1
+        &:after
+                clear: both
+                content: "."
+                display: block
+                font-size: 0
+                height: 0
+                line-height: 0
+                visibility: hidden
+
+// Add color param
+@mixin anchor-reset
+        text-decoration: none
+        color: $black
+
+@mixin centered        
+        //max-width: $width
+        max-width: $width
+        *width: $width
+        margin-left: auto
+        margin-right: auto
+
+// Sets inline block in all browsers
+@mixin inline-block
+        display: inline-block
+        *display: inline
+
+$default-prefixes: webkit moz ms o
+@mixin prefix($property, $value, $prefixes: $default-prefixes) 
+        @each $prefix in $prefixes 
+                -#{$prefix}-#{$property}: #{$value}
+        #{$property}: #{$value}
+
+// @mixin vendor-prefix($name, $argument)
+//         #{$name}: $argument
+//         -webkit-#{$name}: $argument
+//         -ms-#{$name}: $argument
+//         -moz-#{$name}: $argument
+//         -o-#{$name}: $argument 
+
+
+@mixin background($imgpath, $position:0 0, $repeat: no-repeat)
+        background: 
+                image: url(../img/#{$imgpath})
+                position: $position
+                repeat: $repeat
