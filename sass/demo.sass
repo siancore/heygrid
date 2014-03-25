@@ -1,0 +1,155 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Comfortaa:400,300,700)
+
+// Demo
+$font-default: Arial, Helvetica, Sans-serif
+$opensans: 'Open Sans', sans-serif
+$comfortaa: 'Comfortaa', cursive
+$body-bkcolor: #fefefe
+$green: #19ac65
+$blue: #3f7edd
+$darkblue: #3170cd
+$gray: #777
+$black: #24262c
+$width-960: 960px
+
+/*resets */
+a
+	color: inherit
+
+
+
+b, 
+strong
+	font-weight: 500
+
+
+@for $i from 1 through 12
+	#{h}#{$i}
+		padding: 0.5em 0
+		margin: 0
+		line-height: normal
+		font-weight: 100
+		font-size: 3.5em-($i*0.5)
+		text-align: center
+		
+
+div,
+header,
+nav,
+section,
+aside,
+article,
+footer
+	position: relative
+	margin: 0
+	padding: 0
+
+pre
+	background: $black
+	padding: 1em
+	white-space: pre
+	word-spacing: normal
+	word-break: normal
+	-moz-tab-size: 4
+	-o-tab-size: 4
+	tab-size: 4
+	-webkit-hyphens: none
+	-moz-hyphens: none
+	-ms-hyphens: none
+	hyphens: none
+	overflow: auto
+
+*,
+*:before,
+*:after
+	//+prefix(box-sizing, border-box)
+
+
+.btn
+	display: inline-block
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	-ms-border-radius: 5px
+	-o-border-radius: 5px
+	border-radius: 5px
+	vertical-align: top
+	color: #fff
+	text-decoration: none
+	padding: .7em 1em
+	border: 3px solid #fff
+	margin: .5em
+	font-size: 1.5em
+
+	&:hover
+		background-color: #fff
+		color: #333
+
+	&.small
+		font-size: 1em
+
+.btn-blue
+	color: $blue
+	border: 2px solid $blue
+
+	&:hover
+		border: 2px solid #fff
+		background-color: $blue
+		color: #fff
+
+
+body
+	background-color: $body-bkcolor
+	font-family: $opensans
+	font-weight: 100
+	margin: 0
+	padding: 0
+	color: $gray
+
+	@media screen and (max-width: 960px)
+		//background-color: blue
+
+
+.wrap-demo
+		
+	h1
+		text-align: center
+
+header
+	padding: 3em
+	background-color: $blue
+	border-bottom: 6px solid $darkblue
+	color: #fff
+	overflow: hidden
+
+	.logo
+		text-decoration: none
+
+		span
+			display: block
+			line-height: normal
+
+
+		.name
+			font-family: $comfortaa
+			font-size: 4em
+			font-weight: 700
+
+		.tagline
+			font-family: $opensans
+			font-size: 1.7em
+			font-weight: 100
+
+	.description
+		font-size: 1.5em
+		font-weight: 100
+		max-width: 680px
+		margin: auto
+
+#content
+	text-align: left
+
+	.grid-block
+		text-align: left
+
+	.wrap-btn-more
+		padding: 2em

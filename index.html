@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Responsive Grid | Hey! Grid - Demo</title>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico" />
+	<meta name="description" content="Responsive Grid, Build hundreds of base templates for web developments. ready for all devices (tables, Phones) and any type of screen.">
+	<link type="text/css" rel="stylesheet" href="css/demo.css">
+	<link type="text/css" rel="stylesheet" href="css/hey-grid.css">
+	<script type="text/javascript">
+		document.createElement("article");
+		document.createElement("footer");
+		document.createElement("header");
+		document.createElement("hgroup");
+		document.createElement("nav");
+		document.createElement("section");
+		document.createElement("aside");
+	</script>
+	<style></style>
+</head>
+<body hey-grid class="section-home">
+	
+	<header>
+
+		<div class="grid-wrap">
+			
+			<a href="" class="logo">
+				<span class="name">Hey Grid!</span>
+				<span class="tagline">useful responsive grid</span>
+			</a>
+		
+			
+			<h1 class="description">Build hundreds of base templates for web developments. Ready for all devices (Laptops, Tablets, Mobile) and any type of Screen.</h1>
+
+			<a href="https://github.com/siancore/heygrid" class="btn">View on Github</a>
+			
+
+		</div>
+
+	</header>
+
+	<section id="content">
+
+		<section class="main-section" id="section-include-files">
+
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+					
+					<h2>Incluir Archivos</h2>
+
+					<p><span class="step">Paso 2</span>: <b>Incluir los archivos</b> de <span class="color-green">hey grid</span>.</p>
+
+					<p>En el head del documento HTML</p>
+
+					<pre>
+						<code class="language-markup">&lt;link type="text/css" rel="stylesheet" href="css/hey-grid.css"></code>
+					</pre>
+
+					<p>o, dentro de tu hoja de estilo</p>
+
+					<pre>
+						<code class="language-css">@import url("css/hey-grid.css");</code>
+					</pre>
+
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="main-section" id="section-spaceless">
+
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+					
+					<h2>Configuracion</h2>
+
+					<p><span class="step">Paso 3: </span><b>Comprimir html</b>, esta grid esta hecha usando el potencial de <b>css</b> <span class="important"> es importante y recomendado comprimir el documento html y con esto remover espacios en blanco entre tags</span>.</p>
+
+					<p>Lo puedes hacer de diferentes maneras. Segun el lenguage que uses</p>
+					
+					<b>Django, Twig Symfony</b>
+
+					<pre>
+						<code class="language-markup">{% spaceless %}
+&lt;body>
+	# Code 	
+&lt;/body>
+{% endspaceless %}</code>
+					</pre>
+
+					<b>PHP:</b>
+
+					<pre>
+					<code class="language-php">function spaceless($buf){
+	return str_replace(array("\n","\r","\t"),'',$buf);
+}</code>
+					</pre>
+
+					<span><b>html - Javascript: </b>Despues del tag body</span>
+
+					<pre>
+						<code class="language-markup">&lt;script>document.body.innerHTML = document.body.innerHTML.replace(/>\s+&lt;/g, ">&lt;");&lt;/script></code>
+					</pre>
+
+				</div>
+				
+			</div>
+
+		</section>
+
+		<section class="main-section" id="section-fast-test">
+
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+					
+					<h2>Una Prueba Rapida</h2>
+					
+					<p><span class="step">Paso 3: </span>Probar que todo vaya bien.</p>
+
+					<p>Si ya hiciste los pasos anteriores y quieres saber rapidamente si la <b>Grid</b> esta bien configurada, solo es que peges el siguiente html despues del tag <b>&lt;body></b> .</p>
+
+					<b>HTML</b>
+
+					<pre>
+					<code class="language-markup">&lt;section class="grid-columns" heygrid-debug>
+	&lt;div class="cols-4">&lt;/div>
+	&lt;div class="cols-8">&lt;/div>
+&lt;/section></code>
+					</pre>
+
+					<b>Resultado:</b>
+
+				</div>
+				
+			</div>
+
+			<div class="grid-wrap" heygrid-debug>
+				<div class="cols-4"></div>
+				<div class="cols-8"></div>
+			</div>
+
+		</section>
+
+		<section class="main-section" id="section-use-columns">
+
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+					
+					<h2>Uso de Columnas</h2>
+
+					<div class="content-inline">
+						<p>El uso de las columnas esta pensando en <b>12 columnas</b> de 60px de ancho y 10px de margen a cada lado, para un total de 960px de ancho.</p>
+					</div>
+
+					<p>Aqui unos <b>ejemplos</b> de uso:</p>
+
+					<h4>Dos Columnas:</h4>
+
+					<pre>
+<code class="language-markup">&lt;section class="grid-columns" heygrid-debug>
+	&lt;div class="cols-3">&lt;/div>
+	&lt;div class="cols-9">&lt;/div>
+&lt;/section>
+
+&lt;section class="grid-columns" heygrid-debug>
+	&lt;div class="cols-6">&lt;/div>
+	&lt;div class="cols-6">&lt;/div>
+&lt;/section>
+</code>
+
+					</pre>
+
+					<b>Resultado</b>
+
+				</div>
+
+				<div class="result-code">
+					
+					<section class="grid-columns" heygrid-debug>
+						<div class="cols-3"></div>
+						<div class="cols-9"></div>
+					</section>
+
+					<section class="grid-columns" heygrid-debug>
+						<div class="cols-6"></div>
+						<div class="cols-6"></div>
+					</section>
+					
+				</div>
+							
+
+				<div class="grid-block">
+
+					<h4>Tres Columnas:</h4>
+
+					<pre>
+<code class="language-markup">&lt;div class="grid-columns" heygrid-debug>
+	&lt;div class="cols-9">&lt;/div>
+	&lt;div class="cols-2">&lt;/div>
+	&lt;div class="cols-1">&lt;/div>
+&lt;/div>
+
+&lt;div class="grid-columns" heygrid-debug>
+	&lt;div class="cols-7">&lt;/div>
+	&lt;div class="cols-3">&lt;/div>
+	&lt;div class="cols-2">&lt;/div>
+&lt;/div></code>
+					</pre>
+
+					<b>Resultado</b>
+
+				</div>
+
+				<div class="result-code">
+					
+					<div class="grid-columns" heygrid-debug>
+						<div class="cols-9"></div>
+						<div class="cols-2"></div>
+						<div class="cols-1"></div>
+					</div>
+
+					<div class="grid-columns" heygrid-debug>
+						<div class="cols-7"></div>
+						<div class="cols-3"></div>
+						<div class="cols-2"></div>
+					</div>
+					
+				</div>
+
+				<div class="grid-block">
+
+					<h4>Cuatro Columnas:</h4>
+
+					<pre>
+<code class="language-markup">&lt;div class="grid-columns" heygrid-debug>
+	&lt;div class="cols-3">&lt;/div>
+	&lt;div class="cols-5">&lt;/div>
+	&lt;div class="cols-2">&lt;/div>
+	&lt;div class="cols-2">&lt;/div>
+&lt;/div>
+
+&lt;div class="grid-columns">
+	&lt;div class="cols-5">&lt;/div>
+	&lt;div class="cols-4">&lt;/div>
+	&lt;div class="cols-2">&lt;/div>
+	&lt;div class="cols-1">&lt;/div>
+&lt;/div></code>
+					</pre>
+
+					<b>Resultado</b>
+
+				</div><!-- end grid-block -->
+
+
+				<div class="result-code">
+					
+					<div class="grid-columns" heygrid-debug>
+						<div class="cols-3"></div>
+						<div class="cols-5"></div>
+						<div class="cols-2"></div>
+						<div class="cols-2"></div>
+					</div>
+
+					<div class="grid-columns" heygrid-debug>
+						<div class="cols-5"></div>
+						<div class="cols-4"></div>
+						<div class="cols-2"></div>
+						<div class="cols-1"></div>
+					</div>
+					
+				</div>
+				
+
+				<div class="wrap-btn-more align-center">
+					<a href="http://heygrid.com/columns/" class="btn small btn-blue">Ver mas ejemplos de columnas</a>
+				</div>
+
+			</div><!--emd grid-wrap -->
+
+		</section>
+
+		<section class="main-section" id="section-use-layouts">
+			
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+
+					<h2>Uso de layouts</h2>
+
+					<div class="content-inline">
+						<p>El uso de contenido esta pensado por layputs porcentuales [10%, 20%, 30%...] a un contenido total de 100%.</p>
+					</div>
+
+					<pre>
+<code class="language-markup">&lt;div class="grid-layout" heygrid-debug>
+	&lt;div class="layout-70">&lt;/div>
+	&lt;div class="layout-30">&lt;/div>
+&lt;/div></code>
+					</pre>
+
+					<b>Resultado</b>
+
+				</div><!--  end grid-block -->
+
+				<div class="result-code">
+							
+					<section class="grid-layout" heygrid-debug>
+						<div class="layout-70"></div>
+						<div class="layout-30"></div>
+					</section>
+
+				</div>
+
+				<div class="wrap-btn-more align-center">
+					<a href="http://heygrid.com/layouts" class="btn small btn-blue">Ver mas ejemplos de layouts</a>
+				</div>
+
+			</div>
+
+		</section>
+		
+		<section class="main-section" id="section-use-boxes">
+
+			<div class="grid-wrap">
+
+				<div class="grid-block">
+						
+					<div class="block-content">
+					
+						<h2>Uso de Cajas</h2>
+
+						<div class="content-inline">
+							<p>El uso de las columnas esta pensando en <b>12 columnas</b> de 60px de ancho y 10px de margen a cada lado, para un total de 960px de ancho.</p>
+						</div>
+
+						<br>
+
+						<pre>
+
+<code class="language-markup">&lt;div class="grid-for-5" heygrid-debug>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+	&lt;div class="grid-box">&lt;/div>
+&lt;/div></code>
+						</pre>
+
+						<b>Result:</b>
+
+					</div>
+
+				</div><!-- grid-block -->
+
+				<div class="result-code">
+							
+					<div class="grid-for-5" heygrid-debug>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+					</div>
+
+				</div>
+
+				<div class="wrap-btn-more align-center">
+					<a href="http://heygrid.com/boxes" class="btn small btn-blue">Ver mas ejemplos de boxes</a>
+				</div>
+
+			</div>
+			
+		</section>
+
+	</section>
+
+<script>
+document.body.innerHTML = document.body.innerHTML.replace(/>\s+</g, "><");
+</script>
+
+</body>
+</html>
