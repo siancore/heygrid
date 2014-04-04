@@ -21,7 +21,10 @@ Git:
 git clone git@github.com:siancore/heygrid.git
 ```
 
-Bower: Comming Soon
+Bower: 
+```bower
+bower install --save heygrid
+```
 
 
 ##Include files
