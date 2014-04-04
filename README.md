@@ -11,7 +11,7 @@ A responsive grid developed in [`SASS`](http://sass-lang.com/) for use as a base
 ---------------
 [See documentation in English](http://heygrid.com/)
 
-[Mira documentación en Español](http://es.heygrid.com/)
+[Ver documentación en Español](http://es.heygrid.com/)
 
 **Step 1**: Download  hey grid  files by using any of the methods below.
 
