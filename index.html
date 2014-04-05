@@ -45,17 +45,17 @@
 
 				<div class="grid-block">
 					
-					<h2>Incluir Archivos</h2>
+					<h2>Include files</h2>
 
-					<p><span class="step">Paso 2</span>: <b>Incluir los archivos</b> de <span class="color-green">hey grid</span>.</p>
+					<p><span class="step">Paso 1</span>: <b>Include</b> hey grid files.</p>
 
-					<p>En el head del documento HTML</p>
+					<p>Inside of <b>&lt;head></b> of the HTML document</p>
 
 					<pre>
 						<code class="language-markup">&lt;link type="text/css" rel="stylesheet" href="css/hey-grid.css"></code>
 					</pre>
 
-					<p>o, dentro de tu hoja de estilo</p>
+					<p>or inside style sheets</p>
 
 					<pre>
 						<code class="language-css">@import url("css/hey-grid.css");</code>
@@ -72,11 +72,11 @@
 
 				<div class="grid-block">
 					
-					<h2>Configuracion</h2>
+					<h2>Configuration</h2>
 
-					<p><span class="step">Paso 3: </span><b>Comprimir html</b>, esta grid esta hecha usando el potencial de <b>css</b> <span class="important"> es importante y recomendado comprimir el documento html y con esto remover espacios en blanco entre tags</span>.</p>
+					<p><span class="step">Paso 2: </span><b>Compress HTML</b>, this grid is made using <b>CSS</b> potential and goods. It is important to compress the HTML document and remove any whitespace between tags.</p>
 
-					<p>Lo puedes hacer de diferentes maneras. Segun el lenguage que uses</p>
+					<p>You can do this in several ways, depending on the language you use.</p>
 					
 					<b>Django, Twig Symfony</b>
 
@@ -96,7 +96,7 @@
 }</code>
 					</pre>
 
-					<span><b>html - Javascript: </b>Despues del tag body</span>
+					<span><b>html - Javascript: </b>After tag body</span>
 
 					<pre>
 						<code class="language-markup">&lt;script>document.body.innerHTML = document.body.innerHTML.replace(/>\s+&lt;/g, ">&lt;");&lt;/script></code>
@@ -114,11 +114,11 @@
 
 				<div class="grid-block">
 					
-					<h2>Una Prueba Rapida</h2>
+					<h2>Quick test</h2>
 					
-					<p><span class="step">Paso 3: </span>Probar que todo vaya bien.</p>
+					<p><span class="step">Paso 3: </span>Testing everything is ok.</p>
 
-					<p>Si ya hiciste los pasos anteriores y quieres saber rapidamente si la <b>Grid</b> esta bien configurada, solo es que peges el siguiente html despues del tag <b>&lt;body></b> .</p>
+					<p>If you did the steps above and want to know quickly if the Grid is correctly configured, simply paste the following HTML code after <b>&lt;body></b> tag.</p>
 
 					<b>HTML</b>
 
@@ -129,7 +129,7 @@
 &lt;/section></code>
 					</pre>
 
-					<b>Resultado:</b>
+					<b>Result:</b>
 
 				</div>
 				
@@ -148,15 +148,9 @@
 
 				<div class="grid-block">
 					
-					<h2>Uso de Columnas</h2>
+					<h2>Using Columns</h2>
 
-					<div class="content-inline">
-						<p>El uso de las columnas esta pensando en <b>12 columnas</b> de 60px de ancho y 10px de margen a cada lado, para un total de 960px de ancho.</p>
-					</div>
-
-					<p>Aqui unos <b>ejemplos</b> de uso:</p>
-
-					<h4>Dos Columnas:</h4>
+					<h4>Two Columns</h4>
 
 					<pre>
 <code class="language-markup">&lt;section class="grid-columns" heygrid-debug>
@@ -172,7 +166,7 @@
 
 					</pre>
 
-					<b>Resultado</b>
+					<b>Result:</b>
 
 				</div>
 
@@ -193,7 +187,7 @@
 
 				<div class="grid-block">
 
-					<h4>Tres Columnas:</h4>
+					<h4>Three Columns:</h4>
 
 					<pre>
 <code class="language-markup">&lt;div class="grid-columns" heygrid-debug>
@@ -209,7 +203,7 @@
 &lt;/div></code>
 					</pre>
 
-					<b>Resultado</b>
+					<b>Result</b>
 
 				</div>
 
@@ -231,7 +225,7 @@
 
 				<div class="grid-block">
 
-					<h4>Cuatro Columnas:</h4>
+					<h4>Four Columns:</h4>
 
 					<pre>
 <code class="language-markup">&lt;div class="grid-columns" heygrid-debug>
@@ -249,7 +243,7 @@
 &lt;/div></code>
 					</pre>
 
-					<b>Resultado</b>
+					<b>Result</b>
 
 				</div><!-- end grid-block -->
 
@@ -274,7 +268,7 @@
 				
 
 				<div class="wrap-btn-more align-center">
-					<a href="http://heygrid.com/columns/" class="btn small btn-blue">Ver mas ejemplos de columnas</a>
+					<a href="http://heygrid.com/columns/" class="btn small btn-blue">See more column examples</a>
 				</div>
 
 			</div><!--emd grid-wrap -->
@@ -287,11 +281,7 @@
 
 				<div class="grid-block">
 
-					<h2>Uso de layouts</h2>
-
-					<div class="content-inline">
-						<p>El uso de contenido esta pensado por layputs porcentuales [10%, 20%, 30%...] a un contenido total de 100%.</p>
-					</div>
+					<h2>Using layouts</h2>
 
 					<pre>
 <code class="language-markup">&lt;div class="grid-layout" heygrid-debug>
@@ -300,7 +290,7 @@
 &lt;/div></code>
 					</pre>
 
-					<b>Resultado</b>
+					<b>Result:</b>
 
 				</div><!--  end grid-block -->
 
@@ -314,7 +304,7 @@
 				</div>
 
 				<div class="wrap-btn-more align-center">
-					<a href="http://heygrid.com/layouts" class="btn small btn-blue">Ver mas ejemplos de layouts</a>
+					<a href="http://heygrid.com/columns" class="btn small btn-blue">See more column examples</a>
 				</div>
 
 			</div>
@@ -329,13 +319,7 @@
 						
 					<div class="block-content">
 					
-						<h2>Uso de Cajas</h2>
-
-						<div class="content-inline">
-							<p>El uso de las columnas esta pensando en <b>12 columnas</b> de 60px de ancho y 10px de margen a cada lado, para un total de 960px de ancho.</p>
-						</div>
-
-						<br>
+						<h2>Using Boxes</h2>
 
 						<pre>
 
@@ -377,7 +361,7 @@
 				</div>
 
 				<div class="wrap-btn-more align-center">
-					<a href="http://heygrid.com/boxes" class="btn small btn-blue">Ver mas ejemplos de boxes</a>
+					<a href="http://heygrid.com/boxes" class="btn small btn-blue">See more boxes examples</a>
 				</div>
 
 			</div>

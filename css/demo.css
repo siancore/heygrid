@@ -15,7 +15,6 @@ h1 {
   line-height: normal;
   font-weight: 100;
   font-size: 3em;
-  text-align: center;
 }
 
 h2 {
@@ -24,7 +23,6 @@ h2 {
   line-height: normal;
   font-weight: 100;
   font-size: 2.5em;
-  text-align: center;
 }
 
 h3 {
@@ -33,7 +31,6 @@ h3 {
   line-height: normal;
   font-weight: 100;
   font-size: 2em;
-  text-align: center;
 }
 
 h4 {
@@ -42,7 +39,6 @@ h4 {
   line-height: normal;
   font-weight: 100;
   font-size: 1.5em;
-  text-align: center;
 }
 
 h5 {
@@ -51,7 +47,6 @@ h5 {
   line-height: normal;
   font-weight: 100;
   font-size: 1em;
-  text-align: center;
 }
 
 h6 {
@@ -60,7 +55,6 @@ h6 {
   line-height: normal;
   font-weight: 100;
   font-size: 0.5em;
-  text-align: center;
 }
 
 h7 {
@@ -69,7 +63,6 @@ h7 {
   line-height: normal;
   font-weight: 100;
   font-size: 0em;
-  text-align: center;
 }
 
 h8 {
@@ -78,7 +71,6 @@ h8 {
   line-height: normal;
   font-weight: 100;
   font-size: -0.5em;
-  text-align: center;
 }
 
 h9 {
@@ -87,7 +79,6 @@ h9 {
   line-height: normal;
   font-weight: 100;
   font-size: -1em;
-  text-align: center;
 }
 
 h10 {
@@ -96,7 +87,6 @@ h10 {
   line-height: normal;
   font-weight: 100;
   font-size: -1.5em;
-  text-align: center;
 }
 
 h11 {
@@ -105,7 +95,6 @@ h11 {
   line-height: normal;
   font-weight: 100;
   font-size: -2em;
-  text-align: center;
 }
 
 h12 {
@@ -114,6 +103,9 @@ h12 {
   line-height: normal;
   font-weight: 100;
   font-size: -2.5em;
+}
+
+h2 {
   text-align: center;
 }
 
@@ -227,7 +219,11 @@ header .description {
 }
 #content .grid-block {
   text-align: left;
+  margin: 10px;
 }
 #content .wrap-btn-more {
   padding: 2em;
+}
+#content .step {
+  font-weight: bold;
 }
