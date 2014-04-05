@@ -87,7 +87,6 @@ If you did the steps above and want to know quickly if the  Grid  is correctly c
 ```
 
 ##Using Columns
----------------
 
 ####Two Columns:
 
