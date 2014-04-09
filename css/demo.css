@@ -1,113 +1,56 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Comfortaa:400,300,700);
 /*resets */
 a {
-  color: inherit;
-}
+  color: inherit; }
 
 b,
 strong {
-  font-weight: 500;
-}
+  font-weight: 500; }
 
 h1 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 3em;
-}
+  font-size: 3em; }
 
 h2 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 2.5em;
-}
+  font-size: 2.5em; }
 
 h3 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 h4 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
 h5 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 h6 {
   padding: 0.5em 0;
   margin: 0;
   line-height: normal;
   font-weight: 100;
-  font-size: 0.5em;
-}
-
-h7 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: 0em;
-}
-
-h8 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: -0.5em;
-}
-
-h9 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: -1em;
-}
-
-h10 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: -1.5em;
-}
-
-h11 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: -2em;
-}
-
-h12 {
-  padding: 0.5em 0;
-  margin: 0;
-  line-height: normal;
-  font-weight: 100;
-  font-size: -2.5em;
-}
+  font-size: 0.5em; }
 
 h2 {
-  text-align: center;
-}
+  text-align: center; }
 
 div,
 header,
@@ -118,8 +61,7 @@ article,
 footer {
   position: relative;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 pre {
   background: #24262c;
@@ -134,8 +76,7 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  overflow: auto;
-}
+  overflow: auto; }
 
 .btn {
   display: inline-block;
@@ -150,25 +91,20 @@ pre {
   padding: 0.7em 1em;
   border: 3px solid white;
   margin: 0.5em;
-  font-size: 1.5em;
-}
-.btn:hover {
-  background-color: white;
-  color: #333333;
-}
-.btn.small {
-  font-size: 1em;
-}
+  font-size: 1.5em; }
+  .btn:hover {
+    background-color: white;
+    color: #333333; }
+  .btn.small {
+    font-size: 1em; }
 
 .btn-blue {
   color: #3f7edd;
-  border: 2px solid #3f7edd;
-}
-.btn-blue:hover {
-  border: 2px solid white;
-  background-color: #3f7edd;
-  color: white;
-}
+  border: 2px solid #3f7edd; }
+  .btn-blue:hover {
+    border: 2px solid white;
+    background-color: #3f7edd;
+    color: white; }
 
 body {
   background-color: #fefefe;
@@ -176,54 +112,42 @@ body {
   font-weight: 100;
   margin: 0;
   padding: 0;
-  color: #777777;
-}
+  color: #777777; }
 
 .wrap-demo h1 {
-  text-align: center;
-}
+  text-align: center; }
 
 header {
   padding: 3em;
   background-color: #3f7edd;
   border-bottom: 6px solid #3170cd;
   color: white;
-  overflow: hidden;
-}
-header .logo {
-  text-decoration: none;
-}
-header .logo span {
-  display: block;
-  line-height: normal;
-}
-header .logo .name {
-  font-family: "Comfortaa", cursive;
-  font-size: 4em;
-  font-weight: 700;
-}
-header .logo .tagline {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.7em;
-  font-weight: 100;
-}
-header .description {
-  font-size: 1.5em;
-  font-weight: 100;
-  max-width: 680px;
-  margin: auto;
-}
+  overflow: hidden; }
+  header .logo {
+    text-decoration: none; }
+    header .logo span {
+      display: block;
+      line-height: normal; }
+    header .logo .name {
+      font-family: "Comfortaa", cursive;
+      font-size: 4em;
+      font-weight: 700; }
+    header .logo .tagline {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.7em;
+      font-weight: 100; }
+  header .description {
+    font-size: 1.5em;
+    font-weight: 100;
+    max-width: 680px;
+    margin: auto; }
 
 #content {
-  text-align: left;
-}
-#content .grid-block {
-  text-align: left;
-  margin: 10px;
-}
-#content .wrap-btn-more {
-  padding: 2em;
-}
-#content .step {
-  font-weight: bold;
-}
+  text-align: left; }
+  #content .grid-block {
+    text-align: left;
+    margin: 10px; }
+  #content .wrap-btn-more {
+    padding: 2em; }
+  #content .step {
+    font-weight: bold; }
